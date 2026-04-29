@@ -3,8 +3,8 @@
 An automated, serverless observability platform built on AWS to track the uptime and response latency of public APIs, complete with custom CloudWatch dashboards and automated SNS email alerts.
 
 ## 🏗️ Architecture
-![Architecture Diagram](./images/architecture.png)
-*(Note: Upload your architecture diagram to the images folder to make this link work)*
+![Architecture Diagram](./images/flowmap.png)
+
 
 ## 🚀 The Problem & Solution
 **The Problem:** API downtime or severe latency spikes can silently break dependent applications, leading to poor user experiences if not caught immediately.
@@ -22,12 +22,11 @@ By utilizing the `boto3` AWS SDK, the Lambda function generates and pushes custo
 
 **CloudWatch Dashboard:**
 ![Dashboard Screenshot](./images/dashboard.png)
-*(Note: Add your screenshot here)*
+
 
 **Automated Incident Alert:**
 If the API response latency exceeds 500ms for two consecutive checks, a CloudWatch Alarm triggers an SNS topic to dispatch an incident email.
-![Email Screenshot](./images/email_alert.png)
-*(Note: Add your screenshot here)*
+
 
 ## 💡 Key Learnings
 * **IAM Roles & Permissions:** Applied the principle of least privilege by securely attaching policies (`CloudWatchFullAccessV2`) to the Lambda execution role.
